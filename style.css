@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    transition: background 0.3s, color 0.3s;
+    background: #f4f4f4;
+    color: #333;
+}
+
+.glava {
+    background: #e0e0e0;
+    padding: 10px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: #fff;
+}
+
+.controls {
+    margin-bottom: 20px;
+}
+
+select, input {
+    padding: 5px;
+    margin: 5px;
+}
+
+#quote {
+    font-size: 20px;
+    margin: 20px 0;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+#quote.fade-in {
+    opacity: 1;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    background: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.favorites, .add-quote, .info {
+    margin-top: 30px;
+    padding: 15px;
+    border-top: 1px solid #ccc;
+    text-align: left;
+}
+
+.favorites ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Стилі для повзунка */
+.volume-control {
+    margin: 20px 0;
+}
+
+.volume-control label {
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+#volume {
+    width: 200px;
+    vertical-align: middle;
+}
+
+/* Теми */
+.dark {
+    background: #333;
+    color: #fff;
+}
+
+.dark .container {
+    background: #444;
+}
+
+.blue {
+    background: #007BFF;
+    color: #fff;
+}
+
+.blue .container {
+    background: #0056b3;
+}

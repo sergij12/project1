@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Генератор цитат</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="glava">
+        <h1>Даний сайт генерує безкоштовно випадкові цитати</h1>
+    </div>
+    <div class="container">
+        <h1>Генератор випадкових цитат</h1>
+        
+        <!-- Вибір мови та категорії -->
+        <div class="controls">
+            <select id="language" onchange="switchLang(this.value)">
+                <option value="uk">Українська</option>
+                <option value="en">English</option>
+            </select>
+            <select id="category" onchange="generateQuote()">
+                <option value="motivation">Мотивація</option>
+                <option value="love">Любов</option>
+                <option value="humor">Гумор</option>
+            </select>
+            <select id="theme" onchange="setTheme(this.value)">
+                <option value="light">Світла</option>
+                <option value="dark">Темна</option>
+                <option value="blue">Синя</option>
+            </select>
+        </div>
+
+        <!-- Виведення цитати -->
+        <p id="quote">Натисніть кнопку для випадкової цитати</p>
+        <div class="buttons">
+            <button onclick="generateQuote()">Нова цитата</button>
+            <button onclick="saveQuote()">Додати до улюблених</button>
+            <button onclick="shareQuote()">Поділитися</button>
+        </div>
+
+        <!-- Повзунок для гучності -->
+        <div class="volume-control">
+            <label for="volume">Гучність звуку: <span id="volume-value">50%</span></label>
+            <input type="range" id="volume" min="0" max="100" value="50" onchange="adjustVolume(this.value)">
+        </div>
+
+        <!-- Статистика -->
+        <p id="stats">Згенеровано цитат: 0</p>
+
+        <!-- Улюблені цитати -->
+        <div class="favorites">
+            <h2>Улюблені цитати</h2>
+            <ul id="favorites-list"></ul>
+        </div>
+
+        <!-- Форма для додавання цитат -->
+        <div class="add-quote">
+            <h2>Додати свою цитату</h2>
+            <input type="text" id="new-quote" placeholder="Введіть цитату">
+            <input type="text" id="new-author" placeholder="Автор (необов’язково)">
+            <button onclick="addUserQuote()">Додати</button>
+        </div>
+
+        <!-- Інформація -->
+        <div class="info">
+            <h2>Про сайт</h2>
+            <p>Цей сайт створений для натхнення та мотивації. Натискаючи кнопку, ви отримуєте випадкову цитату, яка може допомогти вам у складний момент або просто підняти настрій.</p>
+        </div>
+    </div>
+
+    <!-- Звук -->
+    <audio id="clickSound" src="D:\teaching\programing\audio.wav"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
